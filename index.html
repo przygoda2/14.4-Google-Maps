@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>14.4 Google-Maps</title>
+  <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <button class="btn-restart">Restart</button>
+  <div class="main-carousel"></div>
+
+
+  <div class="progress-bar"></div>
+  <div id="map"></div>
+
+  <script id="templateCarousel" type="x-tmpl-mustache">
+
+    <div class="carousel-cell" style="background-image: url({{image}})">
+      <div class="container">
+        <h2>{{title}}</h2>
+        {{{description}}}
+      </div>
+    </div>
+</script>
+
+  <script>
+    var data = [{
+      title: '1 title',
+      description: '<p>1 description</p>',
+      image: 'https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      coords: { lat: 53.149002, lng: 17.896019 }
+    },
+    {
+      title: '2 title',
+      description: '<p>2 description</p>',
+      image: 'https://images.pexels.com/photos/346271/exposure-long-photography-rotterdam-346271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      coords: { lat: 53.107928, lng: 18.111039 }
+    },
+    {
+      title: '3 title',
+      description: '<p>3 description</p>',
+      image: 'https://images.pexels.com/photos/164459/pexels-photo-164459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      coords: { lat: 53.171789, lng: 18.164689 }
+    },
+    {
+      title: '4 title',
+      description: '<p>4 description</p>',
+      image: 'https://images.pexels.com/photos/164459/pexels-photo-164459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      coords: { lat: 53.172541, lng: 18.040367 }
+    },
+    {
+      title: '5 title',
+      description: '<p>5 description</p>',
+      image: 'https://images.pexels.com/photos/166422/pexels-photo-166422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      coords: { lat: 53.070665, lng: 18.073905 }
+    }
+    ];
+  </script>
+
+  <script src="vendor/flickity.pkgd.min.js"></script>
+  <script src="vendor/hash.js"></script>
+  <script src="vendor/mustache.js"></script>
+
+  <!-- ok kodilla
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM"></script>
+  -->
+
+  <!-- PP
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpMfd-5ZWqWhfv0kQMg3WFc9m6z6JGQHw"></script>
+    -->
+  <script src="js/script.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM&callback=initMap"></script>
+</body>
+
+</html>
