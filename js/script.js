@@ -4,15 +4,15 @@
       zoom: 11,
       center: data[0].coords
     });
-    var markers = [];
+    var marker = [];
     for (let i = 0; i < data.length; i++) {
-      markers[i] = new google.maps.Marker({
+      marker[i] = new google.maps.Marker({
         position: data[i].coords,
         map: map
       });
 
       // akcja na kliknięcie na zdarzenie kliknięcia w marker
-      markers[i].addListener('click', function () {
+      marker[i].addListener('click', function () {
         flkty.select(i);
       });
     }
